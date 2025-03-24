@@ -1,0 +1,45 @@
+{{ 'cart-drawer-la.css' | asset_url | stylesheet_tag }}
+
+<section class="cart-drawer-la">
+  <div class="cart-drawer-wrapper-la">
+    <div class="cart-drawer-box">
+      <header class="cart-drawer-header">
+        
+      </header>
+
+      
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Cart drawer",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 8,
+      "max": 100,
+      "step": 4,
+      "default": 40,
+      "label": "Products per page"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 4,
+      "label": "Number of columns on desktop"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cart drawer"
+    }
+  ]
+}
+{% endschema %}
